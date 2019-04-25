@@ -48,7 +48,7 @@ function draw() {
     n = sli.value();
     fn = getFibonacci(n);
     fnplus1 = getFibonacci(n+1);
-    ratio = approxGoldenRatio(n);
+    ratio = approxphi(n);
     ratiowidth = width * ratio;
     ratioheight = height * ratio;
 
@@ -60,7 +60,7 @@ function draw() {
     fill(0,0,0,100);
     textSize(20);
     text(
-      "φ ≈ " + (ratio + 1) + "\n" +
+      "φ phi ≈ " + (ratio) + "\n" +
       "x = " + n + "\n" +
       "F₍ₓ₎ = " + fn + "\n" +
       "F₍ₓ₊₁₎ = " + fnplus1
@@ -87,7 +87,7 @@ function getFibonacci(n) {
 
 // approximate phi using the Nth fibonacci number
 
-function approxGoldenRatio(n) {
+function approxphi(n) {
 
   this.fibonacciN = getFibonacci(n);
   this.fibonacciNplus1 = getFibonacci(n+1);

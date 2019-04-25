@@ -48,7 +48,7 @@ function draw() {
     n = sli.value();
     fn = getFibonacci(n);
     fnplus1 = getFibonacci(n+1);
-    ratio = approxGoldenRatio(n) + 1;
+    ratio = approxGoldenRatio(n);
     ratiowidth = width * ratio;
     ratioheight = height * ratio;
 
@@ -60,7 +60,7 @@ function draw() {
     fill(0,0,0,100);
     textSize(20);
     text(
-      "φ ≈ " + ratio + "\n" +
+      "φ ≈ " + (ratio + 1) + "\n" +
       "x = " + n + "\n" +
       "F₍ₓ₎ = " + fn + "\n" +
       "F₍ₓ₊₁₎ = " + fnplus1
